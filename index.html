@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibit | Computer Studies Cluster</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --addu-blue: #003366;
+            --addu-gold: #ce9d00;
+            --white: #ffffff;
+            /* Lightened glass for a brighter feel */
+            --glass: rgba(255, 255, 255, 0.5); 
+        }
+
+        * { box-sizing: border-box; transition: all 0.3s ease; }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Outfit', sans-serif;
+            overflow: hidden;
+        }
+
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('IMG_4904.png') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Reduced opacity from 0.25 to 0.1 for a brighter background */
+            background: rgba(0, 51, 102, 0.1); 
+            z-index: -1;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: var(--glass);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            
+            width: 90%; 
+            max-width: 1100px; 
+            height: 650px; 
+            
+            padding: 50px;
+            border-radius: 40px;
+            text-align: center;
+            
+            display: flex;
+            flex-direction: column;
+            /* Brighter border for better contrast */
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.2);
+            border-top: 15px solid var(--addu-blue);
+            
+            overflow-y: auto; 
+        }
+
+        .container::-webkit-scrollbar { width: 8px; }
+        .container::-webkit-scrollbar-thumb {
+            background: var(--addu-blue);
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: var(--addu-blue);
+            margin: 0 0 10px 0;
+            flex-shrink: 0;
+        }
+
+        .divider {
+            width: 120px;
+            height: 4px;
+            background: var(--addu-gold);
+            margin: 15px auto;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .content-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .description-box {
+            text-align: justify;
+            color: #001a33;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-size: 1.15rem;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-item {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .highlight-item strong { 
+            display: block; 
+            color: var(--addu-blue); 
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .action-area {
+            margin-top: 20px;
+            flex-shrink: 0;
+        }
+
+        .btn-continue {
+            display: inline-block;
+            background: var(--addu-blue);
+            color: var(--white);
+            padding: 18px 70px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 1.5px;
+            box-shadow: 0 8px 15px rgba(0, 51, 102, 0.3);
+        }
+
+        .btn-continue:hover {
+            transform: translateY(-3px);
+            background-color: var(--addu-gold);
+            color: var(--addu-blue);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .instruction-text {
+            margin-top: 15px;
+            font-weight: 700;
+            color: var(--addu-blue);
+            font-size: 1rem;
+        }
+
+        .footer-text {
+            margin-top: 35px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--addu-blue);
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-container"></div>
+<div class="bg-overlay"></div>
+
+<div class="container">
+    <h1>Welcome to Computer Studies Cluster Exhibit</h1>
+    <div class="divider"></div>
+
+    <div class="content-body">
+        <div class="description-box">
+            <p>
+                In the <strong>Graphics, Animation, and Multimedia Technologies</strong> subject, students explore the principles of digital design, 
+                animation, and interactivity. As game designers for a multimedia studio, students used the <strong>Wick Editor</strong> to create 
+                fully functional games that showcase creativity, smooth movement, and technical problem-solving.
+            </p>
+
+            
+        </div>
+    </div>
+
+    <div class="action-area">
+        <a href="exhibit.html" class="btn-continue">View the Output</a>
+        <div class="instruction-text">Computer Studies Cluster</div>
+        
+    </div>
+</div>
+
+</body>
+</html>
